@@ -15,14 +15,22 @@ Based on
 # Notes
 Sound hardware access needs docker parameter:
 `--privileged`
+
 PulseAudio needs docker parameter
 `--net=host`
+
 Run a container:
+
  `docker run -it --privileged --net=host ubuntu`
+
 Play test sound:
+
 `aplay /usr/share/sounds/alsa/Front_Center.wav`
+
 Run PulseAudio:
+
 `pulseaudio --start`
+
 `pulseaudio --kill`
 
 PulseAudio network config:
@@ -43,4 +51,5 @@ ENV HOME /home/docky
 ```
 
 Listen to multicast RTP stream:
+
 `rtp://224.0.0.56:45678`
