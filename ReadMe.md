@@ -1,10 +1,24 @@
-# PulseAudio Raspberry
+# rpi-rtp-raspotify
+Stream Raspotify over RTP using PulseAudio.
+
+Based on 
+- [Raspotify][https://github.com/dtcooper/raspotify] by David Cooper
+- Docker
+- PulseAudio
+
+# Build
+`docker build -t username/raspotify ./`
+
+# Run
+`docker run -itd --privileged  --net=host username/raspotify`
+
+# Notes
 Sound hardware access needs docker parameter:
 `--privileged`
 PulseAudio needs docker parameter
 `--net=host`
 Run a container:
- `docker run -it --privileged ubuntu`
+ `docker run -it --privileged --net=host ubuntu`
 Play test sound:
 `aplay /usr/share/sounds/alsa/Front_Center.wav`
 Run PulseAudio:
@@ -27,3 +41,6 @@ RUN chown -R docky.docky /home/example.txt
 USER docky
 ENV HOME /home/docky
 ```
+
+Listen to multicast RTP stream:
+`rtp://224.0.0.56:45678`
