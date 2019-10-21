@@ -2,7 +2,7 @@
 Stream Raspotify over RTP using PulseAudio.
 
 Based on 
-- [Raspotify][https://github.com/dtcooper/raspotify] by David Cooper
+- [Raspotify](https://github.com/dtcooper/raspotify) by David Cooper
 - Docker
 - PulseAudio
 
